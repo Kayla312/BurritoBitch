@@ -1,0 +1,32 @@
+{
+  "name": "burritobitch",
+  "version": "1.0.0",
+  "description": "BurritoBitch is a burrito logger utilizing MySQL, Node, Express, Handlebars and a homemade ORM (yum!) following the MVC design pattern; using Node and MySQL, BurritoBitch queries and routes data, and uses Handlebars to generate  HTML.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kayla312/BurritoBitch.git"
+  },
+  "keywords": [
+    "MySQL",
+    "Node",
+    "Express",
+    "Handlebars",
+    "ORM"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kayla312/BurritoBitch/issues"
+  },
+  "homepage": "https://github.com/Kayla312/BurritoBitch#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
