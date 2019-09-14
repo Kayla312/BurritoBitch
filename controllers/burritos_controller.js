@@ -5,8 +5,13 @@ var router = express.Router();
 // Import the model (burrito.js) to use its database functions.
 var burrito = require("../models/burrito.js");
 
+// router.get("/", function(req, res) {
+//   res.redirect("/burrito");
+// });
+
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
+  //express callback response bty calling burrito.selectAllBu
   burrito.all(function(data) {
     var hbsObject = {
       burritos: data
@@ -17,13 +22,11 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burritos", function(req, res) {
-  burrito.create([
-    "bitchin_name", "consumed"
-  ], [
-    req.body.bitchin_name, req.body.consumed
-  ], function(result) {
-    // Send back the ID of the new quote
+  burrito.create(["bitchin_name", "consumed"], 
+  [req.body.bitchin_name, req.body.consumed], function(result) {
+    // Send back the ID of the new burrito
     res.json({ id: result.insertId });
+    // res.redirect("/");
   });
 });
 
